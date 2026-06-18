@@ -1,4 +1,4 @@
-package com.example.tuner_app
+package com.kujukito.tuner_app
 
 import io.flutter.embedding.android.FlutterActivity
 
