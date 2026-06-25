@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Guitar Tuner</title>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #111008;
+      --surface: #1A1208;
+      --border: #2E2010;
+      --gold: #D4920A;
+      --gold-dim: #8B6914;
+      --text: #E8D9B8;
+      --muted: #7A6845;
+      --faint: #3A2E1A;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Georgia', serif;
+      font-size: 16px;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 48px 0 36px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      letter-spacing: 4px;
+      color: var(--gold-dim);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: -0.5px;
+    }
+
+    .updated {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      font-family: 'Courier New', monospace;
+      letter-spacing: 1px;
+    }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 56px 24px 96px;
+    }
+
+    .summary-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 4px;
+      padding: 20px 24px;
+      margin-bottom: 52px;
+    }
+
+    .summary-box p {
+      font-size: 15px;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .summary-box strong {
+      color: var(--gold);
+      font-style: normal;
+    }
+
+    section {
+      margin-bottom: 44px;
+    }
+
+    h2 {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    p {
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 14px;
+    }
+
+    ul li {
+      padding: 6px 0 6px 20px;
+      position: relative;
+      color: var(--text);
+    }
+
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold-dim);
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid var(--faint);
+      transition: border-color 0.15s;
+    }
+
+    a:hover {
+      border-color: var(--gold);
+    }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <p class="eyebrow">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: June 25, 2026</p>
+  </header>
+
+  <main>
+
+    <div class="summary-box">
+      <p>
+        <strong>Short version:</strong> Guitar Tuner does not collect, store, or share
+        any personal data. Everything stays on your device.
+      </p>
+    </div>
+
+    <section>
+      <h2>1. Overview</h2>
+      <p>
+        Sound Tuner is developed and maintained as an independent project.
+        This Privacy Policy explains what information the App accesses and how it is used.
+      </p>
+      <p>
+        We are committed to protecting your privacy. This App is designed to function
+        entirely on-device and does not transmit any data to external servers.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Data We Do Not Collect</h2>
+      <p>The App does not collect, transmit, or store any of the following:</p>
+      <ul>
+        <li>Personal identification information (name, email, phone number)</li>
+        <li>Location data</li>
+        <li>Device identifiers or advertising IDs</li>
+        <li>Usage analytics or crash reports sent to third parties</li>
+        <li>Audio recordings — microphone input is processed in real-time and immediately discarded</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Microphone Access</h2>
+      <p>
+        The App requests access to your device's microphone solely to perform
+        real-time pitch detection for the guitar tuner feature.
+      </p>
+      <p>
+        Audio captured from the microphone is processed locally on your device
+        in real-time. It is never recorded, saved to disk, or transmitted
+        anywhere. Once the tuner is closed, no audio data is retained.
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Local Storage</h2>
+      <p>
+        The App saves your preferences (such as tuning settings, metronome BPM,
+        and time signature) to your device's local storage using Android's
+        SharedPreferences. This data:
+      </p>
+      <ul>
+        <li>Never leaves your device</li>
+        <li>Is not accessible to us or any third party</li>
+        <li>Can be cleared at any time by uninstalling the App</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Third-Party Services</h2>
+      <p>
+        The App does not integrate any third-party SDKs for analytics, advertising,
+        or crash reporting (such as Firebase, Google Analytics, Facebook SDK, etc.).
+      </p>
+      <p>
+        The only platform interaction is with the Google Play Store for app
+        distribution, which is governed by
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">
+          Google's Privacy Policy
+        </a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Children's Privacy</h2>
+      <p>
+        The App does not knowingly collect any information from children under
+        the age of 13. Since we collect no personal data from any user, the App
+        is safe for use by all ages.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Changes to This Policy</h2>
+      <p>
+        If this Privacy Policy is updated, the new version will be published at
+        this URL with a revised "Last updated" date. We encourage you to review
+        this page periodically.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Contact</h2>
+      <p>
+        If you have any questions about this Privacy Policy, please open an issue
+        on our GitHub repository or reach out via email at
+        <a href="mailto:ramaaryasutaweihan@email.com">ramaaryasutaweihan@email.com</a>.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    Sound Tuner &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; June 2026
+  </footer>
+
+</body>
+
+</html>
