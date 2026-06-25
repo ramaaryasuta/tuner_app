@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../../components/drawer.dart';
 import '../bloc/tuner_bloc.dart';
 import '../bloc/tuner_event.dart';
 import '../bloc/tuner_state.dart';
@@ -11,7 +12,7 @@ class TunerPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(create: (_) => TunerBloc(), child: const _TunerView());
+    return const _TunerView();
   }
 }
 
@@ -21,6 +22,7 @@ class _TunerView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const MyDrawer(),
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
@@ -61,24 +63,37 @@ class _TunerView extends StatelessWidget {
               return Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 24,
-                  vertical: 16,
+                  vertical: 8,
                 ),
                 child: Column(
                   children: [
                     const SizedBox(height: 24),
+                    Row(
+                      spacing: 10,
+                      mainAxisAlignment: .spaceBetween,
+                      children: [
+                        IconButton(
+                          onPressed: () {
+                            Scaffold.of(context).openDrawer();
+                          },
+                          tooltip: 'Open Drawer App',
+                          icon: const Icon(Icons.menu_rounded),
+                        ),
 
-                    const Text(
-                      'SOUND TUNER',
-                      style: TextStyle(
-                        color: Colors.white54,
-                        fontSize: 14,
-                        letterSpacing: 2,
-                        fontWeight: FontWeight.w600,
-                      ),
+                        const Text(
+                          'SOUND TUNER',
+                          style: TextStyle(
+                            color: Colors.white54,
+                            fontSize: 14,
+                            letterSpacing: 2,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+
+                        const SizedBox(width: 40),
+                      ],
                     ),
-
                     const Spacer(),
-
                     AnimatedDefaultTextStyle(
                       duration: const Duration(milliseconds: 150),
                       style: const TextStyle(

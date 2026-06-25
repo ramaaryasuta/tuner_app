@@ -1,19 +1,29 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'features/tuner/presentation/pages/tuner_page.dart';
+import 'core/config/injection.dart';
+import 'core/routing/app_router.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(const TunerApp());
+  runZonedGuarded(() async {
+    WidgetsFlutterBinding.ensureInitialized();
+
+    // setup depedency injection before app launch
+    await initializeInjection();
+
+    runApp(const MyApp());
+  }, (e, s) {});
 }
 
-class TunerApp extends StatelessWidget {
-  const TunerApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Sound Tuner',
       debugShowCheckedModeBanner: false,
+      routerConfig: appRouter,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFF6C63FF),
@@ -21,7 +31,6 @@ class TunerApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const TunerPage(),
     );
   }
 }

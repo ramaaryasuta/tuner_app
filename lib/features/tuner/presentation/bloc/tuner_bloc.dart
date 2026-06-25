@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:record/record.dart';
-import 'package:tuner_app/features/tuner/domain/pitch_detector.dart';
-import 'package:tuner_app/features/tuner/presentation/bloc/tuner_event.dart';
-import 'package:tuner_app/features/tuner/presentation/bloc/tuner_state.dart';
+import '../../domain/pitch_detector.dart';
+import 'tuner_event.dart';
+import 'tuner_state.dart';
 
 class TunerBloc extends Bloc<TunerEvent, TunerState> {
   final AudioRecorder _recorder = AudioRecorder();
